@@ -1,14 +1,43 @@
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { useState } from 'react'
+import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap'
 import { FaRocket, FaUsers, FaCertificate } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import CourseCard from '../components/CourseCard/CourseCard'
 import { courses } from '../data/courses'
 
 const HomePage = () => {
-  const featuredCourses = courses.slice(0, 4) // Перші 4 курси
+  const [showModal, setShowModal] = useState(false)
+  const featuredCourses = courses.slice(0, 4)
 
   return (
     <div>
+      {/* Модальне вікно */}
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>🎯 Оберіть курс для старту</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Для початку навчання рекомендуємо:</p>
+          <ul>
+            <li><strong>Основи React</strong> - ідеально для початківців в веб-розробці</li>
+            <li><strong>JavaScript для початківців</strong> - основа всіх веб-технологій</li>
+            <li><strong>Веб-дизайн з нуля</strong> - якщо цікавить UI/UX</li>
+          </ul>
+          <p className="text-muted">Курси доступні 24/7, починайте будь-коли!</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Скасувати
+          </Button>
+          <Button variant="primary" as={Link} to="/courses" onClick={() => setShowModal(false)}>
+            Перейти до всіх курсів
+          </Button>
+          <Button variant="success" as={Link} to="/course/1" onClick={() => setShowModal(false)}>
+            Почати "Основи React"
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
       {/* Герой секція */}
       <div className="bg-primary text-white py-5">
         <Container>
@@ -20,7 +49,12 @@ const HomePage = () => {
               <p className="lead mb-4">
                 Ваша цифрова база знань для ефективного навчання
               </p>
-              <Button variant="light" size="lg" className="fw-bold me-3">
+              <Button 
+                variant="light" 
+                size="lg" 
+                className="fw-bold me-3"
+                onClick={() => setShowModal(true)}
+              >
                 Почати навчання
               </Button>
               <Button as={Link} to="/courses" variant="outline-light" size="lg">

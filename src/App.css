@@ -76,3 +76,13 @@
     transform: none;
   }
 }
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  .modal-footer .btn {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
