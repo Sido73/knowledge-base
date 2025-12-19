@@ -1,16 +1,84 @@
-# React + Vite
+# KnowledgeBase - Освітня платформа
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Курсовий проект** з дисципліни "РОЗРОБКА ВЕБДОДАТКІВ ЗА ДОПОМОГОЮ ФРЕЙМВОРКІВ"
 
-Currently, two official plugins are available:
+## 📖 Опис проекту
+Веб-додаток для онлайн-освіти, розроблений з використанням фреймворку React. Платформа надає функціонал для перегляду курсів, пошуку, фільтрації та збереження улюблених курсів.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Основні функції
+- **Каталог курсів** з фільтрацією за категоріями
+- **Пошук** за назвою, описом та викладачем
+- **Система "Обране"** з використанням LocalStorage
+- **Детальна інформація** про кожен курс
+- **Адаптивний дизайн** для всіх пристроїв
 
-## React Compiler
+## 🛠️ Технологічний стек
+- **Frontend:** React 19, React Router DOM v7
+- **UI Framework:** Bootstrap 5, React-Bootstrap
+- **Іконки:** React Icons
+- **Бандлер:** Vite
+- **Мова:** JavaScript (ES6+)
+- **Стилі:** CSS3, адаптивний дизайн
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📁 Структура проекту
+knowledge-base/
+├── src/
+│ ├── components/ # Перевикористовувані компоненти
+│ │ ├── Header/ # Навігаційна панель
+│ │ ├── CourseCard/ # Картка курсу
+│ │ └── SearchBar/ # Компонент пошуку
+│ ├── pages/ # Сторінки додатка
+│ │ ├── HomePage.jsx # Головна сторінка
+│ │ ├── CatalogPage.jsx # Каталог курсів
+│ │ ├── CoursePage.jsx # Деталі курсу
+│ │ └── FavoritesPage.jsx # Обрані курси
+│ ├── data/ # Мокові дані
+│ │ └── courses.js # Дані курсів та категорій
+│ ├── App.jsx # Основний компонент
+│ └── main.jsx # Точка входу
+├── public/ # Статичні файли
+├── screenshots/ # Скріншоти інтерфейсу
+└── package.json # Залежності проекту
 
-## Expanding the ESLint configuration
+## 🚀 Інструкція запуску
+```bash
+# 1. Клонувати репозиторій
+git clone
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 2. Перейти у папку проекту
+cd knowledge-base
+
+# 3. Встановити залежності
+npm install
+
+# 4. Запустити у режимі розробки
+npm run dev
+
+# 5. Відкрити у браузері
+# Додаток буде доступний за адресою: http://localhost:5173
+
+Головна сторінка
+https://github.com/Sido73/knowledge-base/raw/main/MainScreenCourse.png
+
+Каталог курсів
+https://github.com/Sido73/knowledge-base/raw/main/CatalogCourses.jpg
+
+Обрані курси
+https://github.com/Sido73/knowledge-base/raw/main/FavoriteCourses.jpg
+
+Особливості реалізації
+Компонентна архітектура - розділення на логічні компоненти
+
+SPA (Single Page Application) - плавна навігація без перезавантажень
+
+Локальне зберігання - збереження обраних курсів у LocalStorage
+
+Реактивний інтерфейс - миттєва реакція на дії користувача
+
+Адаптивний дизайн - коректне відображення на мобільних пристроях
+
+Автор
+ПІБ: Сидоренко Микола Павлович
+Група: ІПЗ-112К9
+Спеціальність: 121 "Інженерія програмного забезпечення"
+ВНЗ: Запорізький інститут економіки та інформаційних технологій
