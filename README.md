@@ -58,13 +58,13 @@ npm run dev
 # Додаток буде доступний за адресою: http://localhost:5173
 
 Головна сторінка
-https://github.com/Sido73/knowledge-base/raw/main/MainScreenCourse.png
+https://github.com/Sido73/knowledge-base/raw/main/screenshots/MainScreenCourse.png
 
 Каталог курсів
-https://github.com/Sido73/knowledge-base/raw/main/CatalogCourses.jpg
+https://github.com/Sido73/knowledge-base/raw/main/screenshots/CatalogCourses.jpg
 
 Обрані курси
-https://github.com/Sido73/knowledge-base/raw/main/FavoriteCourses.jpg
+https://github.com/Sido73/knowledge-base/raw/main/screenshotsFavoriteCourses.jpg
 
 Особливості реалізації
 Компонентна архітектура - розділення на логічні компоненти
