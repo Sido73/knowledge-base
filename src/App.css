@@ -1,0 +1,78 @@
+/* Загальні стилі */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* Стилі для футера */
+.hover-text-white:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+/* Анімації для карток */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Стилі для курсів */
+.course-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Кнопка обраного */
+.favorite-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.2rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+  }
+  
+  .course-card .card-title {
+    font-size: 1.1rem;
+  }
+  
+  footer .row > div {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Утиліти */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Забезпечення контрастності для доступності */
+@media (prefers-reduced-motion: reduce) {
+  .card-hover {
+    transition: none;
+  }
+  
+  .card-hover:hover {
+    transform: none;
+  }
+}
