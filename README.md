@@ -14,3 +14,9 @@
 ```bash
 npm install
 npm run dev
+
+## 📸 Скріншоти
+
+![Головна сторінка](https://github.com/YOUR_USERNAME/knowledge-base/raw/main/MainScreenCourse.png)
+![Каталог курсів](https://github.com/YOUR_USERNAME/knowledge-base/raw/main/CatalogCourses.jpg)  
+![Обрані курси](https://github.com/YOUR_USERNAME/knowledge-base/raw/main/FavoriteCourses.jpg)
